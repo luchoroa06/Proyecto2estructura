@@ -62,7 +62,7 @@ public class ListaDocumentos {
         String otaku = " ";
         NodoListaD aux = primero;
         while (aux != null) {
-            otaku = aux.docu.nombre + " -> " + aux.docu.prioridad + "->" + aux.docu.tipo;
+            otaku += aux.docu.nombre + " -> " + aux.docu.prioridad + "->" + aux.docu.tipo;
             aux = aux.sig;
         }
         return otaku;

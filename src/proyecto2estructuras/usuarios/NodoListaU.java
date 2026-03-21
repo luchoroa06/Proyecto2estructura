@@ -9,9 +9,9 @@ package proyecto2estructuras.usuarios;
  * @author PC
  */
 public class NodoListaU {
-    NodoListaU sig; //sig de la lista
-    NodoListaU ant; //ant de la lista
-    Usuario dato;  // el dato del usuario
+    public NodoListaU sig; //sig de la lista
+    public NodoListaU ant; //ant de la lista
+    public Usuario dato;  // el dato del usuario
 
     /**
      * contructor de la lista de usuarios.

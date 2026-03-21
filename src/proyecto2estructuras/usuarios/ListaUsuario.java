@@ -4,9 +4,6 @@
  */
 package proyecto2estructuras.usuarios;
 
-import proyecto2estructuras.documentos.Documento;
-import proyecto2estructuras.documentos.NodoListaD;
-
 /**
  *
  * @author PC
@@ -65,7 +62,7 @@ public class ListaUsuario {
         String otaku = " ";
         NodoListaU aux = primero;
         while (aux != null) {
-            otaku = aux.dato.nombre + " -> " + aux.dato.tipo + "->" + aux.dato.lDoc.imprimir();
+            otaku += aux.dato.nombre + " -> " + aux.dato.tipo + "->" + aux.dato.lDoc.imprimir() + "\n" ;
             aux = aux.sig;
         }
         return otaku;

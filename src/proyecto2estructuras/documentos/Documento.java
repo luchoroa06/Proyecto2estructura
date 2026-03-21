@@ -28,7 +28,7 @@ public class Documento {
         this.nombre = nombre;
         this.tamaño = tamaño;
         this.tipo = tipo;
-        this.prioridad = null;
+        this.prioridad = " ";
         this.creador = creador;
     }
     

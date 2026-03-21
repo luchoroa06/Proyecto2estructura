@@ -11,9 +11,9 @@ import proyecto2estructuras.documentos.ListaDocumentos;
  * @author PC
  */
 public class Usuario {
-    String nombre;   //nombre del usuario del documento
-    String tipo;     //tipo de usuario "prioridad"
-    ListaDocumentos lDoc;   //documento a imprimir
+    public String nombre;   //nombre del usuario del documento
+    public String tipo;     //tipo de usuario "prioridad"
+    public ListaDocumentos lDoc;   //documento a imprimir
 
     /**
      * contructor de usuarios y tus componentes
@@ -21,7 +21,7 @@ public class Usuario {
      * @param tipo
      * @param lDoc 
      */
-    public Usuario(String nombre, String tipo, ListaDocumentos lDoc) {
+    public Usuario(String nombre, String tipo) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.lDoc = new ListaDocumentos();
