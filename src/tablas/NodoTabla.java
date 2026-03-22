@@ -4,10 +4,23 @@
  */
 package tablas;
 
+import proyecto2estructuras.documentos.Documento;
+import proyecto2estructuras.usuarios.Usuario;
+
 /**
  *
  * @author sebas
  */
 public class NodoTabla {
+    Documento documento;
+    Usuario usuario;
+    NodoTabla sig;
+
+    public NodoTabla(Documento documento, Usuario usuario) {
+        this.documento = documento;
+        this.usuario = usuario;
+        this.sig = null;
+    }
+    
     
 }
