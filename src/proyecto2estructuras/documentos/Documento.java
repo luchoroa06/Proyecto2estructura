@@ -11,11 +11,11 @@ import proyecto2estructuras.usuarios.Usuario;
  * @author PC
  */
 public class Documento {
-    String nombre;  //nombre del documento
-    int tamaño;     //tamaño del documento
-    String tipo;    //tipo de docunto
-    String prioridad;  //prioridad del documento0
-    Usuario creador;      //usuario que creo el documento;
+    public String nombre;  //nombre del documento
+    public int tamaño;     //tamaño del documento
+    public String tipo;    //tipo de docunto
+    public String prioridad;  //prioridad del documento0
+    public Usuario creador;      //usuario que creo el documento;
     
     /**
      * contructor del documento y sus datos.
