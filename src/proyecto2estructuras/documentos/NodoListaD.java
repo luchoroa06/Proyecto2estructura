@@ -9,9 +9,9 @@ package proyecto2estructuras.documentos;
  * @author PC
  */
 public class NodoListaD {
-    NodoListaD sig;
-    NodoListaD ant;
-    Documento docu;
+    public NodoListaD sig;
+    public NodoListaD ant;
+    public Documento docu;
 
     /**
      * contructor de la lista de documentos

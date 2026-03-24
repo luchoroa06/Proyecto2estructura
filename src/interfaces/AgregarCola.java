@@ -46,7 +46,6 @@ public class AgregarCola extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         usuario = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         prioridad = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -65,30 +64,39 @@ public class AgregarCola extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton1.setText("Atras");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 100, 40));
 
+        usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         usuario.addActionListener(this::usuarioActionPerformed);
-        jPanel2.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 190, 50));
+        jPanel2.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 190, 50));
 
-        jButton2.setText("Buscar");
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jButton2.setText("Insertar");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 100, 50));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 100, 50));
 
-        jLabel1.setText("Insertar ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
-        jPanel2.add(prioridad, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 190, 50));
+        prioridad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel2.add(prioridad, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 190, 50));
 
-        jLabel2.setText("Ingresar usuario");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jLabel2.setText("Ingresar Usuario");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jLabel3.setText("Ingresar Documento");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 470));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -151,7 +159,6 @@ public class AgregarCola extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

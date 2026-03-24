@@ -50,25 +50,34 @@ static Arbol arbol;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton1.setText("Mostrar cola");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, -1, -1));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 160, 70));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 370, 290));
 
-        jLabel1.setText("Cola De Impresión formato arbol");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Bell MT", 1, 24)); // NOI18N
+        jLabel1.setText("COLA DE IMPRESION FORMATO ARBOL");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, -1));
 
-        jButton2.setText("jButton2");
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        jButton2.setText("Atras");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 100, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 510));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

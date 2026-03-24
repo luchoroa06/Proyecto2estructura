@@ -56,31 +56,46 @@ static Arbol arbol;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 160, 50));
 
+        nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 170, 70));
+
+        tamano.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tamano.addActionListener(this::tamanoActionPerformed);
-        jPanel1.add(tamano, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 140, 50));
-        jPanel1.add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 140, 50));
+        jPanel1.add(tamano, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 170, 70));
 
-        jLabel1.setText("Nombre del documento");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
+        tipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 170, 70));
 
-        jLabel2.setText("Tamaño del documento");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jLabel1.setText("Nombre Del Documento");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
 
-        jLabel4.setText("Tipo de documento");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jLabel2.setText("Tamaño Del Documento");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jLabel4.setText("Tipo De Documento");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton1.setText("Crear Documento");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204)));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 170, 60));
 
-        jButton2.setText("jButton2");
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        jButton2.setText("Atras");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 110, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 890, 610));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

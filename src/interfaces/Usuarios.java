@@ -47,22 +47,30 @@ static Arbol arbol;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 460, 300));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 460, 300));
 
-        jButton1.setText("jButton1");
+        jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        jButton1.setText("Atras");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 463, 110, 50));
 
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton2.setText("jButton2");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, -1, -1));
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 2, true));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 160, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 540));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -4,6 +4,9 @@
  */
 package interfaces;
 
+import static interfaces.Eliminar.arbol;
+import static interfaces.Eliminar.tabla;
+import static interfaces.Eliminar.usuarios;
 import proyecto2estructuras.Arbol;
 import proyecto2estructuras.usuarios.ListaUsuario;
 import tablas.Tabla;
@@ -48,6 +51,7 @@ public class Insertar extends javax.swing.JFrame {
         prioridad = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -63,30 +67,46 @@ public class Insertar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("Atras");
         jButton1.addActionListener(this::jButton1ActionPerformed);
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
 
+        usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         usuario.addActionListener(this::usuarioActionPerformed);
-        jPanel2.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 180, 40));
+        jPanel2.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 190, 70));
 
-        jButton2.setText("Añadir usuario");
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jButton2.setText("Añadir Usuario");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 180, 80));
 
-        jLabel1.setText("Insertar ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
-        jPanel2.add(prioridad, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 220, 180, 40));
+        jLabel1.setFont(new java.awt.Font("Bell MT", 1, 24)); // NOI18N
+        jLabel1.setText("INSERTAR");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, -1, -1));
 
-        jLabel2.setText("Ingresar usuario");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, -1, -1));
+        prioridad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(prioridad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 190, 70));
 
+        jLabel2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jLabel2.setText("Ingresar Usuario");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jLabel3.setText("Ingresar Prioridad");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 570));
+        jButton3.setBackground(new java.awt.Color(51, 255, 204));
+        jButton3.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        jButton3.setText("Atras");
+        jButton3.addActionListener(this::jButton3ActionPerformed);
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 100, 40));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -110,6 +130,12 @@ public class Insertar extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Menuprincipal m = new Menuprincipal(arbol,tabla,usuarios);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,6 +165,7 @@ public class Insertar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

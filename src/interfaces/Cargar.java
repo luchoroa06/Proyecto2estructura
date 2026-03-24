@@ -77,23 +77,31 @@ public void leerArchivo(File archivo) {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton1.setText("Cargar");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 140, 60));
 
-        jButton2.setText("jButton2");
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        jButton2.setText("Atras");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 120, 50));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 260, 180));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 360, 240));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

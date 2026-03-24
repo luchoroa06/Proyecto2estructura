@@ -48,21 +48,31 @@ public class Eliminar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(elimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 180, 140, 50));
 
+        elimina.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(elimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 210, 100));
+
+        jLabel1.setFont(new java.awt.Font("Bell MT", 1, 24)); // NOI18N
         jLabel1.setText("Ingresar usuario");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, -1));
 
-        jButton1.setText("jButton1");
+        jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
+        jButton1.setText("Atras");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 120, 50));
 
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton2.setText("Eliminar");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 210, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 460));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
