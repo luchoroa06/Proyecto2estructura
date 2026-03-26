@@ -4,8 +4,8 @@
  */
 package tablas;
 
-import proyecto2estructuras.documentos.Documento;
-import proyecto2estructuras.usuarios.Usuario;
+import documentos.Documento;
+import usuarios.Usuario;
 
 /**
  *
@@ -16,19 +16,19 @@ public class Tabla {
     int t;
 /**
  * contrustor del hastable
- * @param t 
+ * @param i 
  */
     public Tabla(int t) {
         this.t = t;
         tabla = new ListaTabla[t];
         for (int i = 0; i < t; i++) {
-            tabla[t] = new ListaTabla();
+            tabla[i] = new ListaTabla();
         }
     }
-    public int hash(String guillenteamo){                     //guillen te amo, sumebe nota porfis ☺
+    public int hash(String clave){                     //guillen te amo, sumebe nota porfis ☺
         int hash = 0;     
-        for (int i = 0; i < guillenteamo.length(); i++) {       //recorremos el array
-           hash += guillenteamo.charAt(i)+73*hash;      //lo multiplicamos por un numero primo para sea mas certero
+        for (int i = 0; i < clave.length(); i++) {       //recorremos el array
+           hash += clave.charAt(i)+73*hash;      //lo multiplicamos por un numero primo para sea mas certero
         }
         if(hash< 0){                // por si el hash da negativo
             hash = hash*(-1);

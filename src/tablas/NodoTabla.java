@@ -4,11 +4,11 @@
  */
 package tablas;
 
-import proyecto2estructuras.documentos.Documento;
-import proyecto2estructuras.usuarios.Usuario;
+import documentos.Documento;
+import usuarios.Usuario;
 
 /**
- *
+ * Nodo de la lista enlazada para la tabla hash
  * @author sebas
  */
 public class NodoTabla {
