@@ -7,7 +7,7 @@ package interfaces;
 import static interfaces.Usuarios.arbol;
 import static interfaces.Usuarios.tabla;
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
 
 /**
@@ -42,8 +42,6 @@ static Arbol arbol;
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
@@ -57,27 +55,21 @@ static Arbol arbol;
         jButton1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton1.setText("Mostrar cola");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 160, 70));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 370, 290));
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 160, 70));
 
         jLabel1.setFont(new java.awt.Font("Bell MT", 1, 24)); // NOI18N
         jLabel1.setText("COLA DE IMPRESION FORMATO ARBOL");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(51, 255, 204));
         jButton2.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
         jButton2.setText("Atras");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 100, 50));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 100, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 560));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -87,6 +79,12 @@ static Arbol arbol;
         Menuprincipal m = new Menuprincipal(arbol,tabla,usuarios);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        arbol.graficarArbol();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,7 +116,5 @@ static Arbol arbol;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

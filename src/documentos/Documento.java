@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proyecto2estructuras.documentos;
+package documentos;
 
-import proyecto2estructuras.usuarios.Usuario;
+import usuarios.Usuario;
 
 /**
  *
@@ -16,7 +16,7 @@ public class Documento {
     public String tipo;    //tipo de docunto
     public String prioridad;  //prioridad del documento0
     public Usuario creador;      //usuario que creo el documento;
-    
+    public int indiceEnMonticulo; // Guardará en qué posición del arreglo está actualmente
     /**
      * contructor del documento y sus datos.
      * @param nombre
@@ -30,6 +30,7 @@ public class Documento {
         this.tipo = tipo;
         this.prioridad = " ";
         this.creador = creador;
+        this.indiceEnMonticulo = -1;
     }
     
     

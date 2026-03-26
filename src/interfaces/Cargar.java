@@ -8,7 +8,7 @@ import proyecto2estructuras.Arbol;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
 /**
  *
@@ -73,6 +73,7 @@ public void leerArchivo(File archivo) {
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -85,7 +86,7 @@ public void leerArchivo(File archivo) {
         jButton1.setText("Cargar");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 140, 60));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 140, 60));
 
         jButton2.setBackground(new java.awt.Color(51, 255, 204));
         jButton2.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
@@ -99,7 +100,11 @@ public void leerArchivo(File archivo) {
         jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 360, 240));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 360, 240));
+
+        jLabel2.setFont(new java.awt.Font("Bell MT", 1, 24)); // NOI18N
+        jLabel2.setText("Ingresar Para Cargar El Csv");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
@@ -156,6 +161,7 @@ public void leerArchivo(File archivo) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

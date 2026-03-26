@@ -8,8 +8,9 @@ import static interfaces.Eliminar.arbol;
 import static interfaces.Eliminar.tabla;
 import static interfaces.Eliminar.usuarios;
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
+import usuarios.Usuario;
 
 /**
  *
@@ -126,6 +127,10 @@ public class Insertar extends javax.swing.JFrame {
         try{
             String usuario = this.usuario.getText();
             String prioridad =  this.prioridad.getText();
+            this.usuario.setText(" ");
+            this.prioridad.setText(" ");
+            Usuario a = new Usuario(usuario, prioridad);
+            usuarios.agregar(a);
         }catch(Exception e){
             
         }

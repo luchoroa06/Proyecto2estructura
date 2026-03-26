@@ -2,25 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proyecto2estructuras.usuarios;
+package documentos;
 
 /**
  *
  * @author PC
  */
-public class ListaUsuario {
-    NodoListaU primero = null;
+public class ListaDocumentos {
+    NodoListaD primero = null;
 
-    public ListaUsuario() {
+    public ListaDocumentos() {
     }
     
   
-    public void agregar(Usuario u) {
-        NodoListaU nuevo = new NodoListaU(u);
+    public void agregar(Documento d) {
+        NodoListaD nuevo = new NodoListaD(d);
         if (primero == null) {
             primero = nuevo;
         } else {
-            NodoListaU aux = primero;
+            NodoListaD aux = primero;
             while (aux.sig != null) {
                 aux = aux.sig;
             }
@@ -32,15 +32,15 @@ public class ListaUsuario {
     public void eliminar(String nombre) {
         if (primero == null) return;
 
-        if (primero.dato.nombre.equals(nombre)) {
+        if (primero.docu.nombre.equals(nombre)) {
             primero = primero.sig;
             return;
         }
 
-        NodoListaU anterior = primero;
-        NodoListaU aux = primero;
+        NodoListaD anterior = primero;
+        NodoListaD aux = primero;
         while (aux != null) {
-            if (aux.dato.nombre.equals(nombre)) {
+            if (aux.docu.nombre.equals(nombre)) {
                 anterior.sig = aux.sig;
                 return;
             }
@@ -49,10 +49,10 @@ public class ListaUsuario {
         }
     }
 
-    public NodoListaU buscar(String nombre) {
-        NodoListaU aux = primero;
+    public NodoListaD buscar(String nombre) {
+        NodoListaD aux = primero;
         while (aux != null) {
-            if (aux.dato.nombre.equals(nombre)) return aux;
+            if (aux.docu.nombre.equals(nombre)) return aux;
             aux = aux.sig;
         }
         return null;
@@ -60,9 +60,9 @@ public class ListaUsuario {
 
     public String imprimir() {
         String otaku = " ";
-        NodoListaU aux = primero;
+        NodoListaD aux = primero;
         while (aux != null) {
-            otaku += aux.dato.nombre + " -> " + aux.dato.tipo + "->" + aux.dato.lDoc.imprimir() + "\n" ;
+            otaku += aux.docu.nombre + " -> " + aux.docu.prioridad + "->" + aux.docu.tipo;
             aux = aux.sig;
         }
         return otaku;

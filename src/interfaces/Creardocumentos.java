@@ -4,11 +4,14 @@
  */
 package interfaces;
 
+import documentos.Documento;
 import static interfaces.Usuarios.arbol;
 import static interfaces.Usuarios.tabla;
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
+import usuarios.NodoListaU;
+import usuarios.Usuario;
 
 /**
  *
@@ -50,6 +53,8 @@ static Arbol arbol;
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        QueUsuario = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
 
@@ -60,40 +65,48 @@ static Arbol arbol;
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 170, 70));
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 170, 70));
 
         tamano.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tamano.addActionListener(this::tamanoActionPerformed);
-        jPanel1.add(tamano, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 170, 70));
+        jPanel1.add(tamano, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 170, 70));
 
         tipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, 170, 70));
+        jPanel1.add(tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 60, 170, 70));
 
         jLabel1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jLabel1.setText("Nombre Del Documento");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
-        jLabel2.setText("Tamaño Del Documento");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
+        jLabel2.setText("Nombre Del Usuario A Crear Su Documento");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jLabel4.setText("Tipo De Documento");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(51, 255, 204));
         jButton1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton1.setText("Crear Documento");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204)));
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 170, 60));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 170, 60));
 
         jButton2.setBackground(new java.awt.Color(51, 255, 204));
         jButton2.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
         jButton2.setText("Atras");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 110, 50));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 110, 50));
+
+        QueUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        QueUsuario.addActionListener(this::QueUsuarioActionPerformed);
+        jPanel1.add(QueUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 170, 70));
+
+        jLabel5.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        jLabel5.setText("Tamaño Del Documento");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 540));
 
@@ -114,12 +127,21 @@ static Arbol arbol;
         // TODO add your handling code here:
         try{
             String nombre = this.nombre.getText();
-            String tamano = this.tamano.getText();
+            int tamano = Integer.parseInt(this.tamano.getText());
             String tipo = this.tipo.getText();
+            String Setusuario = this.QueUsuario.getText();
+            NodoListaU usuariobuscado = usuarios.buscar(nombre);
+            Documento a = new Documento(nombre,tamano, tipo, usuariobuscado.dato);
+            usuariobuscado.dato.lDoc.agregar(a);
+            
         }catch(Exception e){
             
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void QueUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QueUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QueUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,12 +169,14 @@ static Arbol arbol;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField QueUsuario;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField tamano;

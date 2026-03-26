@@ -5,7 +5,7 @@
 package interfaces;
 
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
 
 /**
@@ -43,7 +43,7 @@ public class Eliminar extends javax.swing.JFrame {
         elimina = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        pene = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,8 +55,8 @@ public class Eliminar extends javax.swing.JFrame {
         jPanel1.add(elimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 210, 100));
 
         jLabel1.setFont(new java.awt.Font("Bell MT", 1, 24)); // NOI18N
-        jLabel1.setText("Ingresar usuario");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, -1));
+        jLabel1.setText("Ingresar Usuario A Eliminar");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(51, 255, 204));
         jButton1.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
@@ -65,12 +65,12 @@ public class Eliminar extends javax.swing.JFrame {
         jButton1.addActionListener(this::jButton1ActionPerformed);
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 120, 50));
 
-        jButton2.setBackground(new java.awt.Color(51, 255, 204));
-        jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
-        jButton2.setText("Eliminar");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
-        jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 210, 60));
+        pene.setBackground(new java.awt.Color(51, 255, 204));
+        pene.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        pene.setText("Eliminar");
+        pene.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
+        pene.addActionListener(this::peneActionPerformed);
+        jPanel1.add(pene, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 210, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 460));
 
@@ -83,14 +83,16 @@ public class Eliminar extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void peneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peneActionPerformed
         // TODO add your handling code here:
         try{
             String elimina = this.elimina.getText();
+            usuarios.eliminar(elimina);
+            
         }catch(Exception e){
             
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_peneActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,8 +122,8 @@ public class Eliminar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField elimina;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton pene;
     // End of variables declaration//GEN-END:variables
 }

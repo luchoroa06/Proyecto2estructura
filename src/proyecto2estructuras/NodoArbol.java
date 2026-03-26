@@ -4,15 +4,16 @@
  */
 package proyecto2estructuras;
 
-import proyecto2estructuras.documentos.Documento;
+import documentos.Documento;
 
 /**
- *
+ * Nodo que se guarda en el montículo
  * @author PC
  */
 public class NodoArbol {
     public Documento documento;
-    public int etiquetaTiempo; 
+    public int etiquetaTiempo;  // Valor que determina la prioridad (menor = más prioridad)
+
 
     public NodoArbol(Documento documento, int etiquetaTiempo) {
         this.documento = documento;

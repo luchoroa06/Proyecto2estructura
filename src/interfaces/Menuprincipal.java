@@ -5,7 +5,7 @@
 package interfaces;
 
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
 
 /**
@@ -50,6 +50,7 @@ public class Menuprincipal extends javax.swing.JFrame {
         insertar = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        eliminar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -62,52 +63,58 @@ public class Menuprincipal extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cargar.setBackground(new java.awt.Color(51, 255, 204));
-        cargar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cargar.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         cargar.setText("Cargar");
         cargar.addActionListener(this::cargarActionPerformed);
-        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 180, 70));
+        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 180, 70));
 
         cola1.setBackground(new java.awt.Color(51, 255, 204));
-        cola1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cola1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         cola1.setText("Cola De Impresion");
         cola1.addActionListener(this::cola1ActionPerformed);
-        jPanel1.add(cola1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 180, 70));
+        jPanel1.add(cola1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 180, 70));
 
         cola2.setBackground(new java.awt.Color(51, 255, 204));
         cola2.setFont(new java.awt.Font("Bell MT", 1, 15)); // NOI18N
         cola2.setText("Cola De Impresion Arbol");
         cola2.addActionListener(this::cola2ActionPerformed);
-        jPanel1.add(cola2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 200, 70));
+        jPanel1.add(cola2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 200, 70));
 
         crear.setBackground(new java.awt.Color(51, 255, 204));
         crear.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         crear.setText("Crear Documentos");
         crear.addActionListener(this::crearActionPerformed);
-        jPanel1.add(crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 180, 70));
+        jPanel1.add(crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 180, 70));
 
         eliminar.setBackground(new java.awt.Color(51, 255, 204));
         eliminar.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         eliminar.setText("Eliminar");
         eliminar.addActionListener(this::eliminarActionPerformed);
-        jPanel1.add(eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 180, 70));
+        jPanel1.add(eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 180, 70));
 
         insertar.setBackground(new java.awt.Color(51, 255, 204));
         insertar.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         insertar.setText("Insertar");
         insertar.addActionListener(this::insertarActionPerformed);
-        jPanel1.add(insertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 180, 70));
+        jPanel1.add(insertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 180, 70));
 
         jButton8.setBackground(new java.awt.Color(51, 255, 204));
         jButton8.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
-        jButton8.setText("Usuarios");
+        jButton8.setText("Mostrar Usuarios");
         jButton8.addActionListener(this::jButton8ActionPerformed);
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 180, 70));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 180, 70));
 
         jLabel1.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
         jLabel1.setText("MENU PRINCIPAL");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 360, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 320, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 580));
+        eliminar1.setBackground(new java.awt.Color(51, 255, 204));
+        eliminar1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        eliminar1.setText("Mandar a Impresion");
+        eliminar1.addActionListener(this::eliminar1ActionPerformed);
+        jPanel1.add(eliminar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 220, 70));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,6 +163,12 @@ this.dispose();// TODO add your handling code here:
                 
     }//GEN-LAST:event_jButton8ActionPerformed
 
+    private void eliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar1ActionPerformed
+        // TODO add your handling code here:
+        AgregarCola v = new AgregarCola(arbol, tabla, usuarios);
+        this.dispose();
+    }//GEN-LAST:event_eliminar1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -187,6 +200,7 @@ this.dispose();// TODO add your handling code here:
     private javax.swing.JButton cola2;
     private javax.swing.JButton crear;
     private javax.swing.JButton eliminar;
+    private javax.swing.JButton eliminar1;
     private javax.swing.JButton insertar;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;

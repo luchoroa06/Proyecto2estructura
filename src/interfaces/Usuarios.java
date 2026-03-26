@@ -5,7 +5,7 @@
 package interfaces;
 
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
 
 /**
@@ -42,7 +42,8 @@ static Arbol arbol;
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        mostrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,7 +56,7 @@ static Arbol arbol;
         jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 460, 300));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 460, 300));
 
         jButton1.setBackground(new java.awt.Color(51, 255, 204));
         jButton1.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
@@ -64,11 +65,16 @@ static Arbol arbol;
         jButton1.addActionListener(this::jButton1ActionPerformed);
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 463, 110, 50));
 
-        jButton2.setBackground(new java.awt.Color(51, 255, 204));
-        jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
-        jButton2.setText("jButton2");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 2, true));
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 160, 70));
+        mostrar.setBackground(new java.awt.Color(51, 255, 204));
+        mostrar.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        mostrar.setText("Mostrar");
+        mostrar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 2, true));
+        mostrar.addActionListener(this::mostrarActionPerformed);
+        jPanel1.add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 160, 70));
+
+        jLabel1.setFont(new java.awt.Font("Bell MT", 1, 36)); // NOI18N
+        jLabel1.setText("Mostrar Usuarios");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 540));
 
@@ -80,6 +86,12 @@ static Arbol arbol;
         Menuprincipal m = new Menuprincipal(arbol,tabla,usuarios);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
+        // TODO add your handling code here:
+        String samanexcentrico = usuarios.imprimir();
+        jTextArea1.setText(samanexcentrico);
+    }//GEN-LAST:event_mostrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,9 +120,10 @@ static Arbol arbol;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton mostrar;
     // End of variables declaration//GEN-END:variables
 }

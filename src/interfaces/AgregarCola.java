@@ -5,9 +5,9 @@
 package interfaces;
 
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.documentos.Documento;
-import proyecto2estructuras.usuarios.ListaUsuario;
-import proyecto2estructuras.usuarios.Usuario;
+import documentos.Documento;
+import usuarios.ListaUsuario;
+import usuarios.Usuario;
 import tablas.Tabla;
 
 /**
@@ -119,12 +119,13 @@ public class AgregarCola extends javax.swing.JFrame {
             if(Usu != null && dtitulo != null){
               Usuario encontrado = usuarios.buscar(Usu).dato;
               if(encontrado != null){
-                  Documento Docu = encontrado.lDoc.buscar(dtitulo).docu;        //FALTA AGREGAR AL ARBOL
+                  Documento Docu = encontrado.lDoc.buscar(dtitulo).docu;
+                  arbol.insertar(Docu, ERROR, encontrado.tipo );    
                   if(Docu != null){
                       tabla.agregar(Docu, encontrado);
                     } 
-                  
-              }
+                  }
+            this.usuario.setText(" ");
             }
         }catch(Exception e){
             

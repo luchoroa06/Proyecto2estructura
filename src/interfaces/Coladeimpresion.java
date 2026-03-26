@@ -7,7 +7,7 @@ package interfaces;
 import static interfaces.Usuarios.arbol;
 import static interfaces.Usuarios.tabla;
 import proyecto2estructuras.Arbol;
-import proyecto2estructuras.usuarios.ListaUsuario;
+import usuarios.ListaUsuario;
 import tablas.Tabla;
 
 /**
@@ -17,7 +17,7 @@ import tablas.Tabla;
 public class Coladeimpresion extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Coladeimpresion.class.getName());
-static Arbol arbol; 
+    static Arbol arbol; 
     static Tabla tabla;
     static ListaUsuario usuarios;
     /**
@@ -65,8 +65,18 @@ static Arbol arbol;
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(51, 255, 204));
+        jButton1.setFont(new java.awt.Font("Bell MT", 1, 14)); // NOI18N
         jButton1.setText("Atras");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
+        jButton1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jButton1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jButton1.addActionListener(this::jButton1ActionPerformed);
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 100, 50));
 
@@ -74,6 +84,7 @@ static Arbol arbol;
         jButton2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         jButton2.setText("Mostrar Cola ");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204), 2));
+        jButton2.addActionListener(this::jButton2ActionPerformed);
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 190, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 580));
@@ -86,6 +97,16 @@ static Arbol arbol;
         Menuprincipal m = new Menuprincipal(arbol,tabla,usuarios);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jButton1AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1AncestorAdded
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String ordenado = arbol.mostrarColaOrdenada();
+        this.jTextArea1.setText(ordenado);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
