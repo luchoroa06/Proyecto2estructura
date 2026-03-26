@@ -130,7 +130,7 @@ static Arbol arbol;
             int tamano = Integer.parseInt(this.tamano.getText());
             String tipo = this.tipo.getText();
             String Setusuario = this.QueUsuario.getText();
-            NodoListaU usuariobuscado = usuarios.buscar(nombre);
+            NodoListaU usuariobuscado = usuarios.buscar(Setusuario);
             Documento a = new Documento(nombre,tamano, tipo, usuariobuscado.dato);
             usuariobuscado.dato.lDoc.agregar(a);
             
