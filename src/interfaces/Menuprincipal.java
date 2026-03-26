@@ -165,7 +165,7 @@ this.dispose();// TODO add your handling code here:
 
     private void eliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar1ActionPerformed
         // TODO add your handling code here:
-        AgregarCola v = new AgregarCola(arbol, tabla, usuarios);
+        MandarImprimir v = new MandarImprimir(arbol, tabla, usuarios);
         this.dispose();
     }//GEN-LAST:event_eliminar1ActionPerformed
 
